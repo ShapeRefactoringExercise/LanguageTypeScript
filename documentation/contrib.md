@@ -1,8 +1,7 @@
 <!--bl
 (filemeta
-    (title "All Contributors"))
+    (title "Contributors"))
 /bl-->
-## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 

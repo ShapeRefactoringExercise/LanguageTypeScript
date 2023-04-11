@@ -10,7 +10,7 @@
 - [Section 3: Setup](#user-content-setup)
 - [Section 4: Run the tests](#user-content-run-the-tests)
 - [Section 5: Changes that need to be made](#user-content-changes-that-need-to-be-made)
-- [Section 6: All Contributors](#user-content-all-contributors)
+- [Section 6: Contributors](#user-content-contributors)
 
 ## Introduction ##
 
@@ -92,8 +92,7 @@ A parallelogram has 4 line segments, side A, side B, side C and side D with side
 A parallelogram should have a height, a width, a perimeter, and a volume.
     
 
-## All Contributors ##
-## Contributors ✨
+## Contributors ##
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
