@@ -9,5 +9,6 @@
     (section-main "./setup.md")
     (section-main "./run.md")
     (section-main "./new.md")
+    (section-main "./contrib.md")
 )
 /bl-->
