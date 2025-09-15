@@ -1,7 +1,4 @@
-<!--bl
-(filemeta
-    (title "Run the tests"))
-/bl-->
+<!-- (dl (section-meta Run the tests)) -->
 
 To run the tests you must first have the requirements installed.
 
@@ -9,7 +6,7 @@ To run the tests you must first have the requirements installed.
 
 This will run the tests. If the tests pass it will then prompt to commit files that changed.
 
-### Explore code
+<!-- (dl (# Explore code)) -->
 
 `gittey check`
 
@@ -17,10 +14,10 @@ This will run the tests. If the tests pass it will then prompt to commit files t
 
 This will run the tests but without trying to commit.
 
-### Commit code regardless of test passing
+<!-- (dl (# Commit code regardless of test passing)) -->
 
 `gittey commit`
 
-### Get rid of Current changes
+<!-- (dl (# Get rid of Current changes)) -->
 
 `gittey undo`

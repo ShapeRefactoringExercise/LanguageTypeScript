@@ -1,0 +1,20 @@
+(section-meta
+    (title Shape Refactoring Exercise)
+    (subtitle A Refactoring Chew Toy)
+    (author Jason Kerney)
+    (include
+        (Section ./intro.md)
+        (Section ./reqs.md)
+        (Section ./setup.md)
+        (Section ./run.md)
+        (Section ./new.md)
+        (Section ./contrib.md)
+    )
+)
+
+(content
+    (toc
+        (label Table of Contents)
+        (style numbered-labeled)
+    )
+)

@@ -1,15 +1,12 @@
-<!--bl
-(filemeta
-    (title "Setup"))
-/bl-->
+<!-- (dl (section-meta Setup)) -->
 
-### Global Setup
+<!-- (dl (# Global Setup)) -->
 
 You need [gittey](https://www.npmjs.com/package/gittey) installed globally.
 
 `npm i gittey -g`
 
-### Local Setup
+<!-- (dl (# Local Setup)) -->
 
 Run:
 

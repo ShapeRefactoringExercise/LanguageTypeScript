@@ -1,11 +1,8 @@
-<!--bl
-(filemeta
-    (title "Changes that need to be made"))
-/bl-->
+<!-- (dl (section-meta Changes that need to be made)) -->
 
 Now to make the refactoring more focused, we have two expected changes that need to happen. These are optional for the purpose of the exercise but help us have a goal in mind.
 
-### A Bug
+<!-- (dl (# A Bug)) -->
 
 **Expected Behavior:**
 If three points are on the same line they should be classified as a line segment between the two furthest points.
@@ -13,7 +10,7 @@ If three points are on the same line they should be classified as a line segment
 **Actual Behavior:**
 The segment is classified as 'Other' and contains all points.
 
-### New Feature
+<!-- (dl (# New Feature)) -->
 
 **Parallelogram**
 If given 5 points that form a parallelogram, but not a rectangle the shape returned should be a parallelogram. The fifth point should be the same as the first forming a closed shape. Each of the other 4 points are unique.

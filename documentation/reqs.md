@@ -1,7 +1,4 @@
-<!--bl
-(filemeta
-    (title "Requirements"))
-/bl-->
+<!-- (dl (section-meta Requirements)) -->
 
 To use this exercise you need the following installed:
 

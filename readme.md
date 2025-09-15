@@ -1,16 +1,22 @@
+<!-- GENERATED DOCUMENT DO NOT EDIT! -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 
-<!-- GENERATED DOCUMENT! DO NOT EDIT! -->
+<!-- Compiled with doculisp https://www.npmjs.com/package/doculisp -->
+<!-- Written By: Jason Kerney -->
+
 # Shape Refactoring Exercise #
-#### A Refactoring Chew Toy ####
 
-## Table Of Contents ##
+### A Refactoring Chew Toy ###
 
-- [Section 1: Introduction](#user-content-introduction)
-- [Section 2: Requirements](#user-content-requirements)
-- [Section 3: Setup](#user-content-setup)
-- [Section 4: Run the tests](#user-content-run-the-tests)
-- [Section 5: Changes that need to be made](#user-content-changes-that-need-to-be-made)
-- [Section 6: Contributors](#user-content-contributors)
+## Table of Contents ##
+
+1. Section: [Introduction](#introduction)
+2. Section: [Requirements](#requirements)
+3. Section: [Setup](#setup)
+4. Section: [Run the tests](#run-the-tests)
+5. Section: [Changes that need to be made](#changes-that-need-to-be-made)
+6. Section: [Contributors](#contributors)
 
 ## Introduction ##
 
@@ -19,7 +25,6 @@ This document is specific for the TypeScript version of the exercise and all com
 This is a different kind of refactoring exercise. Most code exercises have a specific answer and are designed to be solved within a couple of hours. This one is intended to have a large number of solutions and take more then 10 hours without completion.
 
 The idea is to be an exercise that you can continuously go back to and see new things. This is not intended for someone who is new to "_test based refactoring_" but for those who are familiar with the process and want to stay sharp or want to dive deeper.
-    
 
 ## Requirements ##
 
@@ -28,22 +33,20 @@ To use this exercise you need the following installed:
 - [node](https://nodejs.org/en/download/)
 - [Gittey](https://www.npmjs.com/package/gittey) globally installed
   - `npm i gittey -g`
-    
 
 ## Setup ##
 
-### Global Setup
+### Global Setup ###
 
 You need [gittey](https://www.npmjs.com/package/gittey) installed globally.
 
 `npm i gittey -g`
 
-### Local Setup
+### Local Setup ###
 
 Run:
 
 `gittey setup`
-    
 
 ## Run the tests ##
 
@@ -53,7 +56,7 @@ To run the tests you must first have the requirements installed.
 
 This will run the tests. If the tests pass it will then prompt to commit files that changed.
 
-### Explore code
+### Explore code ###
 
 `gittey check`
 
@@ -61,20 +64,19 @@ This will run the tests. If the tests pass it will then prompt to commit files t
 
 This will run the tests but without trying to commit.
 
-### Commit code regardless of test passing
+### Commit code regardless of test passing ###
 
 `gittey commit`
 
-### Get rid of Current changes
+### Get rid of Current changes ###
 
 `gittey undo`
-    
 
 ## Changes that need to be made ##
 
 Now to make the refactoring more focused, we have two expected changes that need to happen. These are optional for the purpose of the exercise but help us have a goal in mind.
 
-### A Bug
+### A Bug ###
 
 **Expected Behavior:**
 If three points are on the same line they should be classified as a line segment between the two furthest points.
@@ -82,7 +84,7 @@ If three points are on the same line they should be classified as a line segment
 **Actual Behavior:**
 The segment is classified as 'Other' and contains all points.
 
-### New Feature
+### New Feature ###
 
 **Parallelogram**
 If given 5 points that form a parallelogram, but not a rectangle the shape returned should be a parallelogram. The fifth point should be the same as the first forming a closed shape. Each of the other 4 points are unique.
@@ -90,15 +92,11 @@ If given 5 points that form a parallelogram, but not a rectangle the shape retur
 A parallelogram has 4 line segments, side A, side B, side C and side D with side A being the first line segment and all other line segments being consecutive. It has for angles angle A, angle B, angle C and angle D, with angle A being the first angle, and all other angles being consecutive.
 
 A parallelogram should have a height, a width, a perimeter, and a volume.
-    
 
 ## Contributors ##
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
 <table>
   <tbody>
     <tr>
@@ -110,13 +108,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tbody>
 </table>
 
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+<!-- Written By: Jason Kerney -->
 <!-- markdownlint-restore -->
 <!-- prettier-ignore-end -->
-
-<!-- ALL-CONTRIBUTORS-LIST:END -->
-
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
-    
-
-<!-- GENERATED DOCUMENT! DO NOT EDIT! -->
-    
+<!-- GENERATED DOCUMENT DO NOT EDIT! -->

@@ -1,7 +1,4 @@
-<!--bl
-(filemeta
-    (title "Introduction"))
-/bl-->
+<!-- (dl (section-meta Introduction)) -->
 
 This document is specific for the TypeScript version of the exercise and all commands listed are intended to be run within then TypeScript directory.
 
