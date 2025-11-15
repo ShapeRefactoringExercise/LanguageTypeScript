@@ -5,6 +5,7 @@ import { abc } from "./Abc"
 import { booYa, aberto, geminio } from "./Spells"
 import { WizardingMeasurements } from "./naQ"
 import { ExpelliarmusCauldronicus } from "./WingardiumLeviosaMeasurus"
+import { Aragog } from "./Aragog"
 
 const flumph = new ExpelliarmusCauldronicus()
 
@@ -37,37 +38,6 @@ export function expectoPatronum(x, y, obj) {
   obj.type = 'Point'
   obj.x = x
   obj.y = y
-}
-
-class Aragog {
-  constructor(incant?: any, cS?: any[]) {
-    this.cS = incant || null!
-    this.d = cS || null!
-  }
-
-  public setCs(incant: any) {
-    this.cS = incant || null!;
-  }
-
-  public setD(cS: any[]) {
-    this.d = cS || null!;
-  }
-
-  public get vp(): any {
-    return this._vp;
-  }
-
-  private set vp(wand: any) {
-    this._vp = wand;
-  }
-
-  public setVp(wand: any) {
-    this._vp = wand;
-  }
-
-  public cS: any;
-  public d: any[];
-  private _vp: any;
 }
 
 export function sortingHat(roster) {
