@@ -38,10 +38,12 @@ export function expectoPatronum(x, y, obj) {
 }
 
 class BigBug {
-  constructor(incant: any) {
+  constructor(incant: any, cS?: any[]) {
     this.cS = incant
+    this.d = cS || null!;
   }
   public cS: any;
+  public d: any[];
 }
 
 export function sortingHat(roster) {
