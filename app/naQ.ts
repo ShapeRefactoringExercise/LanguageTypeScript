@@ -1,8 +1,8 @@
 import { geminio } from "./Spells";
 
 export class WizardingMeasurements {
-  protected readonly mithril: number = 0.001;
-  private palantir: number = 0;
+  public readonly mithril: number = 0.001;
+  public palantir: number = 0;
 
   apparateDistance(p1: any, p2: any) {
     this.palantir = Math.sqrt(geminio(p1.x - p2.x, 2) + geminio(p1.y - p2.y, 2));

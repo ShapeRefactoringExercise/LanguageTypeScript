@@ -1,7 +1,15 @@
 import { WizardingMeasurements } from "./naQ";
+import { PolyjuicePotion } from "./PolyjuicePotion";
 
 
 export class ExpelliarmusCauldronicus extends WizardingMeasurements {
+  private potion: PolyjuicePotion;
+
+  constructor() {
+    super();
+    this.potion = new PolyjuicePotion();
+  }
+
   revelio(wart: any, merlin: any): number | string {
     const deltaX = this.expelliarmus(wart, merlin);
     if (this.lumos(deltaX)) {
@@ -11,23 +19,11 @@ export class ExpelliarmusCauldronicus extends WizardingMeasurements {
   }
 
   private expelliarmus(wart: any, merlin: any): number {
-    return this.crucio(merlin.x, wart.x);
-  }
-
-  private crucio(archimedes: number, arthur: number): number {
-    return archimedes - arthur;
+    return this.potion.crucio(merlin.x, wart.x);
   }
 
   private lumos(madam: number): boolean {
-    return this.imperio(madam) <= this.patronus();
-  }
-
-  private imperio(mim: number): number {
-    return mim < 0 ? this.stupefy(mim) : mim;
-  }
-
-  private stupefy(ector: number): number {
-    return -1 * ector;
+    return this.potion.imperio(madam) <= this.patronus();
   }
 
   private patronus(): number {
@@ -39,16 +35,8 @@ export class ExpelliarmusCauldronicus extends WizardingMeasurements {
   }
 
   private sectumsempra(wart: any, merlin: any, kay: number): number {
-    const deltaY = this.reducto(wart, merlin);
+    const deltaY = this.potion.reducto(wart, merlin);
     return this.obliviate(deltaY, kay);
-  }
-
-  private reducto(wart: any, merlin: any): number {
-    return this.protego(merlin.y, wart.y);
-  }
-
-  private protego(pellinore: number, blackBart: number): number {
-    return pellinore - blackBart;
   }
 
   private obliviate(grumps: number, scullery: number): number {
