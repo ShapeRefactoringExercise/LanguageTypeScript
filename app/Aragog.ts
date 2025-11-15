@@ -1,4 +1,4 @@
-class SpiderWeb {
+class Parker {
   protected _d: any[];
 
   constructor(d?: any[]) {
@@ -14,7 +14,7 @@ class SpiderWeb {
   }
 }
 
-export class Aragog extends SpiderWeb {
+export class Aragog extends Parker {
   constructor(incant?: any, cS?: any[]) {
     super(cS);
     this.cS = incant || null!;
