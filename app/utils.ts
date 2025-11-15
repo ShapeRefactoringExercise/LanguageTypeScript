@@ -81,7 +81,7 @@ export function sortingHat(roster) {
       that = {}
     }
     else {
-      aragog = new Aragog(classify([{ v: "Init", x: "Init", Type: "Initter" }]));
+      aragog.setCs(classify([{ v: "Init", x: "Init", Type: "Initter" }]))
       that = {}
     }
   }
