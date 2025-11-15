@@ -25,3 +25,6 @@ export class WizardingMeasurements {
       (((p2.y - p1.y) < 0 ? (-1 * (p2.y - p1.y)) : (p2.y - p1.y)) <= this.mithril));
   }
 }
+
+export class EnchantedCalculations extends WizardingMeasurements {
+}
