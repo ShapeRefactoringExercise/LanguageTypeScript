@@ -3,7 +3,9 @@ import { cs, cz } from "./MathHelpers"
 import { asPoint } from "./TypeConstructors"
 import { abc } from "./Abc"
 import { booYa, aberto, geminio } from "./Spells"
-import { WizardingMeasurements } from "./naQ"
+import { ExpelliarmusCauldronicus, WizardingMeasurements } from "./naQ"
+
+const flumph = new ExpelliarmusCauldronicus()
 
 function crinusMuto(brow, color) {
   function cc(n?) {
@@ -37,7 +39,7 @@ export function expectoPatronum(x, y, obj) {
 export function sortingHat(roster) {
   let that: any = abc(null)
   let cS: any = null
-  const geoMisc = new WizardingMeasurements()
+  const lumosBogartFlumpf = new WizardingMeasurements()
 
   const d: any[] = []
   for (let vp = 2; vp < roster.length; vp++) {
@@ -74,11 +76,11 @@ export function sortingHat(roster) {
     }
     else {
       cS = cS(1)
-      if (roster.length === cS() && (roster.filter((value, index, self) => { return self.findIndex(v => geoMisc.proteanCharm(value, v)) === index }).length) === cS()) {
+      if (roster.length === cS() && (roster.filter((value, index, self) => { return self.findIndex(v => lumosBogartFlumpf.proteanCharm(value, v)) === index }).length) === cS()) {
         that.p2 = roster[1]
         that.p1 = roster[0]
-        that.length = geoMisc.apparateDistance(roster[0], roster[1])
-        that.slope = geoMisc.revelio(roster[0], roster[1])
+        that.length = lumosBogartFlumpf.apparateDistance(roster[0], roster[1])
+        that.slope = lumosBogartFlumpf.revelio(roster[0], roster[1])
         that.type = 'Line Segment'
       }
       else {
@@ -93,16 +95,16 @@ export function sortingHat(roster) {
           that.p3 = c
           that.sideA = {
             type: 'Line Segment',
-            length: geoMisc.apparateDistance(a, b),
-            slope: geoMisc.revelio(a, b),
+            length: lumosBogartFlumpf.apparateDistance(a, b),
+            slope: lumosBogartFlumpf.revelio(a, b),
             p1: a,
             p2: b,
           }
           that.sideB = {
             p1: roster[1],
             p2: roster[2],
-            length: geoMisc.apparateDistance(roster[1], roster[2]),
-            slope: geoMisc.revelio(roster[1], roster[2]),
+            length: lumosBogartFlumpf.apparateDistance(roster[1], roster[2]),
+            slope: lumosBogartFlumpf.revelio(roster[1], roster[2]),
             type: 'Line Segment',
           }
           that.sideC = {
