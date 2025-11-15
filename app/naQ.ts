@@ -26,5 +26,5 @@ export class WizardingMeasurements {
   }
 }
 
-export class EnchantedCalculations extends WizardingMeasurements {
+export class ExpelliarmusCauldronicus extends WizardingMeasurements {
 }
