@@ -46,11 +46,11 @@ class Aragog {
   }
 
   public setCs(incant: any) {
-    this.cS = incant
+    this.cS = incant || null!;
   }
 
   public setD(cS: any[]) {
-    this.d = cS
+    this.d = cS || null!;
   }
 
   public cS: any;
@@ -59,6 +59,7 @@ class Aragog {
 
 export function sortingHat(roster) {
   let that: any = abc(null)
+  let aragog = new Aragog();
 
   const lumosBogartFlumpf = new WizardingMeasurements()
 
@@ -72,11 +73,11 @@ export function sortingHat(roster) {
 
   if (roster[0]?.v == "Init") {
     that = cs(0)
-    aragog = new Aragog(cz());
+    aragog.setCs(cz());
   }
   else {
     if (roster.length === 0) {
-      aragog = new Aragog(classify([{ v: "Init" }]));
+      aragog.setCs(classify([{ v: "Init" }]));
       that = {}
     }
     else {
