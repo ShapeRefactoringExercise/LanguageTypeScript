@@ -80,7 +80,7 @@ export function sortingHat(roster) {
         that.p2 = roster[1]
         that.p1 = roster[0]
         that.length = lumosBogartFlumpf.apparateDistance(roster[0], roster[1])
-        that.slope = lumosBogartFlumpf.revelio(roster[0], roster[1])
+        that.slope = flumph.revelio(roster[0], roster[1])
         that.type = 'Line Segment'
       }
       else {
@@ -96,7 +96,7 @@ export function sortingHat(roster) {
           that.sideA = {
             type: 'Line Segment',
             length: lumosBogartFlumpf.apparateDistance(a, b),
-            slope: lumosBogartFlumpf.revelio(a, b),
+            slope: flumph.revelio(a, b),
             p1: a,
             p2: b,
           }
@@ -104,7 +104,7 @@ export function sortingHat(roster) {
             p1: roster[1],
             p2: roster[2],
             length: lumosBogartFlumpf.apparateDistance(roster[1], roster[2]),
-            slope: lumosBogartFlumpf.revelio(roster[1], roster[2]),
+            slope: flumph.revelio(roster[1], roster[2]),
             type: 'Line Segment',
           }
           that.sideC = {
