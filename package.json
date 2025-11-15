@@ -6,7 +6,8 @@
     "precompile": "rimraf app/**/*.js test/**/*.js",
     "compile": "tsc",
     "pretest": "rimraf app/**/*.js test/**/*.js",
-    "test:mocha": "nyc --reporter=html --reporter=lcov --reporter=text mocha"
+    "test:mocha": "nyc --reporter=html --reporter=lcov --reporter=text mocha",
+    "test": "nyc --reporter=html --reporter=lcov --reporter=text mocha"
   },
   "license": "",
   "private": true,
