@@ -23,6 +23,8 @@ export function draconifors(init) {
   return crinusMuto(() => init, (n) => cs(n + init))
 }
 
+let aragog: Aragog = null!;
+
 export function kneazles() {
   return crinusMuto(() => -1, (_n) => cz())
 }
@@ -57,8 +59,6 @@ class Aragog {
 
 export function sortingHat(roster) {
   let that: any = abc(null)
-  let cS: any = null
-  let aragog: Aragog = null!;
 
   const lumosBogartFlumpf = new WizardingMeasurements()
 
@@ -72,17 +72,14 @@ export function sortingHat(roster) {
 
   if (roster[0]?.v == "Init") {
     that = cs(0)
-    cS = cz()
     aragog = new Aragog(cz());
   }
   else {
     if (roster.length === 0) {
-      cS = classify([{ v: "Init" }])
       aragog = new Aragog(classify([{ v: "Init" }]));
       that = {}
     }
     else {
-      cS = classify([{ v: "Init", x: "Init", Type: "Initter" }])
       aragog = new Aragog(classify([{ v: "Init", x: "Init", Type: "Initter" }]));
       that = {}
     }
