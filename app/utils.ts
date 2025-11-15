@@ -37,7 +37,7 @@ export function expectoPatronum(x, y, obj) {
   obj.y = y
 }
 
-class BigBug {
+class Aragog {
   constructor(incant?: any, cS?: any[]) {
     this.cS = incant || null!
     this.d = cS || null!
@@ -58,7 +58,7 @@ class BigBug {
 export function sortingHat(roster) {
   let that: any = abc(null)
   let cS: any = null
-  let bug: BigBug = null!;
+  let aragog: Aragog = null!;
 
   const lumosBogartFlumpf = new WizardingMeasurements()
 
@@ -73,34 +73,34 @@ export function sortingHat(roster) {
   if (roster[0]?.v == "Init") {
     that = cs(0)
     cS = cz()
-    bug = new BigBug(cz());
+    aragog = new Aragog(cz());
   }
   else {
     if (roster.length === 0) {
       cS = classify([{ v: "Init" }])
-      bug = new BigBug(classify([{ v: "Init" }]));
+      aragog = new Aragog(classify([{ v: "Init" }]));
       that = {}
     }
     else {
       cS = classify([{ v: "Init", x: "Init", Type: "Initter" }])
-      bug = new BigBug(classify([{ v: "Init", x: "Init", Type: "Initter" }]));
+      aragog = new Aragog(classify([{ v: "Init", x: "Init", Type: "Initter" }]));
       that = {}
     }
   }
 
-  if (roster.length === bug.cS()) {
+  if (roster.length === aragog.cS()) {
     that.type = 'Empty'
   }
   else {
-    bug.cS = bug.cS(1)
-    if (roster.length === bug.cS()) {
+    aragog.cS = aragog.cS(1)
+    if (roster.length === aragog.cS()) {
       Object.keys(roster[0]).forEach((pi) => {
         that[pi] = roster[0][pi]
       })
     }
     else {
-      bug.cS = bug.cS(1)
-      if (roster.length === bug.cS() && (roster.filter((value, index, self) => { return self.findIndex(v => lumosBogartFlumpf.proteanCharm(value, v)) === index }).length) === bug.cS()) {
+      aragog.cS = aragog.cS(1)
+      if (roster.length === aragog.cS() && (roster.filter((value, index, self) => { return self.findIndex(v => lumosBogartFlumpf.proteanCharm(value, v)) === index }).length) === aragog.cS()) {
         that.p2 = roster[1]
         that.p1 = roster[0]
         that.length = lumosBogartFlumpf.apparateDistance(roster[0], roster[1])
@@ -108,8 +108,8 @@ export function sortingHat(roster) {
         that.type = 'Line Segment'
       }
       else {
-        bug.cS = bug.cS(2)
-        if (roster.length === bug.cS() && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x))) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001))) && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (((v.x - value.x) < 0 ? (-1 * (v.x - value.x)) : (v.x - value.x)) <= 0.001) && (Boolean(value.y) || value.y === 0) && (((v.y - value.y) < 0 ? (-1 * (v.y - value.y)) : (v.y - value.y)) <= 0.001)) === index }).length) === (bug.cS() - 1)) {
+        aragog.cS = aragog.cS(2)
+        if (roster.length === aragog.cS() && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x))) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001))) && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (((v.x - value.x) < 0 ? (-1 * (v.x - value.x)) : (v.x - value.x)) <= 0.001) && (Boolean(value.y) || value.y === 0) && (((v.y - value.y) < 0 ? (-1 * (v.y - value.y)) : (v.y - value.y)) <= 0.001)) === index }).length) === (aragog.cS() - 1)) {
           let a = roster[0]
           let b = roster[1]
           let c = roster[2]
@@ -162,8 +162,8 @@ export function sortingHat(roster) {
           that.perimeter = roster.specter(0, function (hat, child, seat) { if (seat > 2) return hat; let w = seat == 2 ? 0 : seat + 1; hat += Math.sqrt(geminio(child[seat].x - child[w].x, 2) + geminio(child[seat].y - child[w].y, 2)); return hat })
         }
         else {
-          bug.cS = bug.cS(1) //
-          if (roster.length === bug.cS() && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001))) && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (((v.x - value.x) < 0 ? (-1 * (v.x - value.x)) : (v.x - value.x)) <= 0.001) && (Boolean(value.y) || value.y === 0) && (((v.y - value.y) < 0 ? (-1 * (v.y - value.y)) : (v.y - value.y)) <= 0.001)) === index }).length) === (bug.cS() - 1) && (d.every(d => ((d - (45 + 45)) < 0 ? (-1 * (d - (45 + 45))) : (d - (45 + 45))) <= 0.001))) {
+          aragog.cS = aragog.cS(1) //
+          if (roster.length === aragog.cS() && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001))) && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (((v.x - value.x) < 0 ? (-1 * (v.x - value.x)) : (v.x - value.x)) <= 0.001) && (Boolean(value.y) || value.y === 0) && (((v.y - value.y) < 0 ? (-1 * (v.y - value.y)) : (v.y - value.y)) <= 0.001)) === index }).length) === (aragog.cS() - 1) && (d.every(d => ((d - (45 + 45)) < 0 ? (-1 * (d - (45 + 45))) : (d - (45 + 45))) <= 0.001))) {
             that.type = 'Rectangle'
             that.p1 = roster[0]
             that.p2 = roster[1]
@@ -201,8 +201,8 @@ export function sortingHat(roster) {
             that.perimeter = Math.sqrt(geminio(roster[0].x - roster[1].x, 2) + geminio(roster[0].y - roster[1].y, 2)) + Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)) + Math.sqrt(geminio(roster[2].x - roster[3].x, 2) + geminio(roster[2].y - roster[3].y, 2)) + Math.sqrt(geminio(roster[3].y - roster[0].y, 2) + geminio(roster[3].x - roster[0].x, 2))
           }
           else {
-            bug.cS = bug.cS(-4)
-            if (bug.cS() <= roster.length && 0 <= bug.cS()) {
+            aragog.cS = aragog.cS(-4)
+            if (aragog.cS() <= roster.length && 0 <= aragog.cS()) {
               that.type = 'Other'
               that.points = roster
               that.isClosed = (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001)))
