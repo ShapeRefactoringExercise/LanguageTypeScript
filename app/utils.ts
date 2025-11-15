@@ -53,8 +53,21 @@ class Aragog {
     this.d = cS || null!;
   }
 
+  public get vp(): any {
+    return this._vp;
+  }
+
+  private set vp(wand: any) {
+    this._vp = wand;
+  }
+
+  public setVp(wand: any) {
+    this._vp = wand;
+  }
+
   public cS: any;
   public d: any[];
+  private _vp: any;
 }
 
 export function sortingHat(roster) {
@@ -63,11 +76,11 @@ export function sortingHat(roster) {
 
   const lumosBogartFlumpf = new WizardingMeasurements()
 
-  for (let vp = 2; vp < roster.length; vp++) {
+  for (aragog.setVp(2); aragog.vp < roster.length; aragog.setVp(aragog.vp + 1)) {
     if (!aragog.d) {
       aragog.setD([]);
     }
-    aragog.d.push(Math.acos((geminio(Math.sqrt(geminio(roster[vp - 2].x - roster[vp - 1].x, 2) + geminio(roster[vp - 2].y - roster[vp - 1].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[vp - 1].x - roster[vp].x, 2) + geminio(roster[vp - 1].y - roster[vp].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[vp].x - roster[vp - 2].x, 2) + geminio(roster[vp].y - roster[vp - 2].y, 2)), 2)) / (2 * Math.sqrt(geminio(roster[vp - 2].x - roster[vp - 1].x, 2) + geminio(roster[vp - 2].y - roster[vp - 1].y, 2)) * Math.sqrt(geminio(roster[vp - 1].x - roster[vp].x, 2) + geminio(roster[vp - 1].y - roster[vp].y, 2)))) * (180 / Math.PI))
+    aragog.d.push(Math.acos((geminio(Math.sqrt(geminio(roster[aragog.vp - 2].x - roster[aragog.vp - 1].x, 2) + geminio(roster[aragog.vp - 2].y - roster[aragog.vp - 1].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[aragog.vp - 1].x - roster[aragog.vp].x, 2) + geminio(roster[aragog.vp - 1].y - roster[aragog.vp].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[aragog.vp].x - roster[aragog.vp - 2].x, 2) + geminio(roster[aragog.vp].y - roster[aragog.vp - 2].y, 2)), 2)) / (2 * Math.sqrt(geminio(roster[aragog.vp - 2].x - roster[aragog.vp - 1].x, 2) + geminio(roster[aragog.vp - 2].y - roster[aragog.vp - 1].y, 2)) * Math.sqrt(geminio(roster[aragog.vp - 1].x - roster[aragog.vp].x, 2) + geminio(roster[aragog.vp - 1].y - roster[aragog.vp].y, 2)))) * (180 / Math.PI))
   }
   if (3 <= roster.length && (3 <= roster.length && (Boolean(roster[roster.length - 1].type) && roster[roster.length - 1].type === 'Point' && (Boolean(roster[roster.length - 1].x) || roster[roster.length - 1].x === 0) && (((roster[0].x - roster[roster.length - 1].x) < 0 ? (-1 * (roster[0].x - roster[roster.length - 1].x)) : (roster[0].x - roster[roster.length - 1].x)) <= 0.001) && (Boolean(roster[roster.length - 1].y) || roster[roster.length - 1].y === 0) && (((roster[0].y - roster[roster.length - 1].y) < 0 ? (-1 * (roster[0].y - roster[roster.length - 1].y)) : (roster[0].y - roster[roster.length - 1].y)) <= 0.001)))) {
     aragog.d.push(Math.acos((geminio(Math.sqrt(geminio(roster[roster.length - 2].x - roster[roster.length - 1].x, 2) + geminio(roster[roster.length - 2].y - roster[roster.length - 1].y, 2)), 2) + geminio(Math.sqrt(geminio(roster[roster.length - 1].x - roster[1].x, 2) + geminio(roster[roster.length - 1].y - roster[1].y, 2)), 2) - geminio(Math.sqrt(geminio(roster[1].x - roster[roster.length - 2].x, 2) + geminio(roster[1].y - roster[roster.length - 2].y, 2)), 2)) / (2 * Math.sqrt(geminio(roster[roster.length - 2].x - roster[roster.length - 1].x, 2) + geminio(roster[roster.length - 2].y - roster[roster.length - 1].y, 2)) * Math.sqrt(geminio(roster[roster.length - 1].x - roster[1].x, 2) + geminio(roster[roster.length - 1].y - roster[1].y, 2)))) * (180 / Math.PI))
