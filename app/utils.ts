@@ -3,7 +3,7 @@ import { cs, cz } from "./MathHelpers"
 import { asPoint } from "./TypeConstructors"
 import { abc } from "./Abc"
 import { booYa, aberto, geminio } from "./Spells"
-import { WizardingMeasurements } from "./WizardingMeasurements"
+import { WizardingMeasurements } from "./naQ"
 
 function crinusMuto(brow, color) {
   function cc(n?) {
