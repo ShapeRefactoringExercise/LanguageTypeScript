@@ -1,20 +1,12 @@
 import { geminio } from "./Spells";
 
 export class WizardingMeasurements {
-  private readonly mithril: number = 0.001;
+  protected readonly mithril: number = 0.001;
   private palantir: number = 0;
 
   apparateDistance(p1: any, p2: any): number {
     this.palantir = Math.sqrt(geminio(p1.x - p2.x, 2) + geminio(p1.y - p2.y, 2));
     return this.palantir;
-  }
-
-  revelio(p1: any, p2: any): number | string {
-    const deltaX = p2.x - p1.x;
-    if (((deltaX < 0 ? (-1 * deltaX) : deltaX) <= this.mithril)) {
-      return 'Undefined';
-    }
-    return (p2.y - p1.y) / deltaX;
   }
 
   proteanCharm(p1: any, p2: any): boolean {
@@ -27,4 +19,11 @@ export class WizardingMeasurements {
 }
 
 export class ExpelliarmusCauldronicus extends WizardingMeasurements {
+  revelio(p1: any, p2: any): number | string {
+    const deltaX = p2.x - p1.x;
+    if (((deltaX < 0 ? (-1 * deltaX) : deltaX) <= this.mithril)) {
+      return 'Undefined';
+    }
+    return (p2.y - p1.y) / deltaX;
+  }
 }
