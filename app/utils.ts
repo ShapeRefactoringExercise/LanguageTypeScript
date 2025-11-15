@@ -38,10 +38,19 @@ export function expectoPatronum(x, y, obj) {
 }
 
 class BigBug {
-  constructor(incant: any, cS?: any[]) {
-    this.cS = incant
-    this.d = cS || null!;
+  constructor(incant?: any, cS?: any[]) {
+    this.cS = incant || null!
+    this.d = cS || null!
   }
+
+  public setCs(incant: any) {
+    this.cS = incant
+  }
+
+  public setD(cS: any[]) {
+    this.d = cS
+  }
+
   public cS: any;
   public d: any[];
 }
