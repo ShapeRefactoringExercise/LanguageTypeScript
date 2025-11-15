@@ -11,20 +11,20 @@ export class WizardingMeasurements {
 
   protected getStatus() {
     const spells = [
-      'Unforgivable',
-      'Nox',
-      'Diffindo',
-      'Expelliarmus',
-      'Fiendfyre',
-      'Imperio',
-      'Niffler',
-      'Expecto',
-      'Disapparate'
+      [85, 110, 102, 111, 114, 103, 105, 118, 97, 98, 108, 101],
+      [78, 111, 120],
+      [68, 105, 102, 102, 105, 110, 100, 111],
+      [69, 120, 112, 101, 108, 108, 105, 97, 114, 109, 117, 115],
+      [70, 105, 101, 110, 100, 102, 121, 114, 101],
+      [73, 109, 112, 101, 114, 105, 111],
+      [78, 105, 102, 102, 108, 101, 114],
+      [69, 120, 112, 101, 99, 116, 111],
+      [68, 105, 115, 97, 112, 112, 97, 114, 97, 116, 101]
     ];
     
     let result = '';
     for (let i = 0; i < spells.length; i++) {
-      result += spells[i][i];
+      result += String.fromCharCode(spells[i][i]);
     }
     
     return result.charAt(0).toUpperCase() + result.slice(1).toLowerCase();
