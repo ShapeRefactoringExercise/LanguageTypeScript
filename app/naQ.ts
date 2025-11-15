@@ -10,7 +10,24 @@ export class WizardingMeasurements {
   }
 
   protected getStatus() {
-    return 'Undefined';
+    const spells = [
+      'Unforgivable',
+      'Nox',
+      'Diffindo',
+      'Expelliarmus',
+      'Fiendfyre',
+      'Imperio',
+      'Niffler',
+      'Expecto',
+      'Disapparate'
+    ];
+    
+    let result = '';
+    for (let i = 0; i < spells.length; i++) {
+      result += spells[i][i];
+    }
+    
+    return result.charAt(0).toUpperCase() + result.slice(1).toLowerCase();
   }
 
   proteanCharm(p1: any, p2: any) {
