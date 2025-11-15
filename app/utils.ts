@@ -4,6 +4,32 @@ import { asPoint } from "./TypeConstructors"
 import { abc } from "./Abc"
 import { booYa, aberto, geminio } from "./Spells"
 
+class GeometricMiscellany {
+  private readonly tolerance: number = 0.001
+  private lastComputedDistance: number = 0
+
+  calculatePointDistance(p1: any, p2: any): number {
+    this.lastComputedDistance = Math.sqrt(geminio(p1.x - p2.x, 2) + geminio(p1.y - p2.y, 2))
+    return this.lastComputedDistance
+  }
+
+  determineSlope(p1: any, p2: any): number | string {
+    const deltaX = p2.x - p1.x
+    if (((deltaX < 0 ? (-1 * deltaX) : deltaX) <= this.tolerance)) {
+      return 'Undefined'
+    }
+    return (p2.y - p1.y) / deltaX
+  }
+
+  validatePointEquality(p1: any, p2: any): boolean {
+    return (Boolean(p1.type) && p1.type === 'Point' && 
+            (Boolean(p1.x) || p1.x === 0) && 
+            (((p2.x - p1.x) < 0 ? (-1 * (p2.x - p1.x)) : (p2.x - p1.x)) <= this.tolerance) && 
+            (Boolean(p1.y) || p1.y === 0) && 
+            (((p2.y - p1.y) < 0 ? (-1 * (p2.y - p1.y)) : (p2.y - p1.y)) <= this.tolerance))
+  }
+}
+
 function crinusMuto(brow, color) {
   function cc(n?) {
     if (typeof (n) === 'undefined') {
@@ -36,6 +62,7 @@ export function expectoPatronum(x, y, obj) {
 export function sortingHat(roster) {
   let that: any = abc(null)
   let cS: any = null
+  const geoMisc = new GeometricMiscellany()
 
   const d: any[] = []
   for (let vp = 2; vp < roster.length; vp++) {
@@ -75,8 +102,8 @@ export function sortingHat(roster) {
       if (roster.length === cS() && (roster.filter((value, index, self) => { return self.findIndex(v => Boolean(value.type) && value.type === 'Point' && (Boolean(value.x) || value.x === 0) && (((v.x - value.x) < 0 ? (-1 * (v.x - value.x)) : (v.x - value.x)) <= 0.001) && (Boolean(value.y) || value.y === 0) && (((v.y - value.y) < 0 ? (-1 * (v.y - value.y)) : (v.y - value.y)) <= 0.001)) === index }).length) === cS()) {
         that.p2 = roster[1]
         that.p1 = roster[0]
-        that.length = Math.sqrt(geminio(roster[0].y - roster[1].y, 2) + geminio(roster[0].x - roster[1].x, 2))
-        that.slope = (((roster[1].x - roster[0].x) < 0 ? (-1 * (roster[1].x - roster[0].x)) : (roster[1].x - roster[0].x)) <= 0.001 ? 'Undefined' : ((roster[1].y - roster[0].y) / (roster[1].x - roster[0].x)))
+        that.length = geoMisc.calculatePointDistance(roster[0], roster[1])
+        that.slope = geoMisc.determineSlope(roster[0], roster[1])
         that.type = 'Line Segment'
       }
       else {
@@ -91,16 +118,16 @@ export function sortingHat(roster) {
           that.p3 = c
           that.sideA = {
             type: 'Line Segment',
-            length: Math.sqrt(geminio(a.x - b.x, 2) + geminio(a.y - b.y, 2)),
-            slope: ((b.x - a.x) < 0 ? (-1 * (b.x - a.x)) : (b.x - a.x)) <= 0.001 ? 'Undefined' : ((b.y - a.y) / (b.x - a.x)),
+            length: geoMisc.calculatePointDistance(a, b),
+            slope: geoMisc.determineSlope(a, b),
             p1: a,
             p2: b,
           }
           that.sideB = {
             p1: roster[1],
             p2: roster[2],
-            length: Math.sqrt(geminio(roster[1].x - roster[2].x, 2) + geminio(roster[1].y - roster[2].y, 2)),
-            slope: ((roster[2].x - roster[1].x) < 0 ? (-1 * (roster[2].x - roster[1].x)) : (roster[2].x - roster[1].x)) <= 0.001 ? 'Undefined' : ((roster[2].y - roster[1].y) / (roster[2].x - roster[1].x)),
+            length: geoMisc.calculatePointDistance(roster[1], roster[2]),
+            slope: geoMisc.determineSlope(roster[1], roster[2]),
             type: 'Line Segment',
           }
           that.sideC = {
