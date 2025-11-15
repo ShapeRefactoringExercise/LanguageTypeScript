@@ -3,7 +3,8 @@ import { cs, cz } from "./MathHelpers"
 import { asPoint } from "./TypeConstructors"
 import { abc } from "./Abc"
 import { booYa, aberto, geminio } from "./Spells"
-import { ExpelliarmusCauldronicus, WizardingMeasurements } from "./naQ"
+import { WizardingMeasurements } from "./naQ"
+import { ExpelliarmusCauldronicus } from "./ExpelliarmusCauldronicus"
 
 const flumph = new ExpelliarmusCauldronicus()
 
